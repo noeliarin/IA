@@ -28,8 +28,8 @@ that say
 
 "*** YOUR CODE HERE ***"
 
-Name student 1: ...
-Name student 2: ...
+Name student 1: Ernesto Piñón Esteban
+Name student 2: Noelia Rincon Roldán
 IA lab group and pair: gggg - mm
 
 
@@ -324,14 +324,18 @@ class CornersProblem(search.SearchProblem):
         space)
         """
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        return (self.startingPosition, set())
 
     def isGoalState(self, state):
         """
         Returns whether this search state is a goal state of the problem.
         """
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        cur_position, visitedCorners = state
+        
+        # El estado objetivo se alcanza cuando se han visitado las 4 esquinas
+        return len(visitedCorners) == 4
+
 
     def getSuccessors(self, received_state):
         """
@@ -345,17 +349,27 @@ class CornersProblem(search.SearchProblem):
         """
 
         successors = []
+        cur_position, visitedCorners = received_state
+
         for action in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
-            # Add a successor state to the successor list if the action is legal
-            # Here's a code snippet for figuring out whether a new position hits a wall:
-            #   x,y = currentPosition
-            #   dx, dy = Actions.directionToVector(action)
-            #   nextx, nexty = int(x + dx), int(y + dy)
-            #   hitsWall = self.walls[nextx][nexty]
+            x, y = cur_position
+            dx, dy = Actions.directionToVector(action)
+            nextx, nexty = int(x + dx), int(y + dy)
+            
+            if not self.walls[nextx][nexty]:
+                next_position = (nextx, nexty)
+                
+                # Creamos una copia de las esquinas visitadas para no modificar el estado actual.
+                new_visitedCorners = visitedCorners.copy()
+                
+                # Si el nuevo estado es una esquina y no ha sido visitada, la añadimos
+                if next_position in self.corners:
+                    new_visitedCorners.add(next_position)
+                    
+                # Añadir el sucesor con el nuevo estado (posición y esquinas visitadas)
+                successors.append(((next_position, new_visitedCorners), action, 1))
 
-            "*** YOUR CODE HERE ***"
-
-        self._expanded += 1  # DO NOT CHANGE
+        self._expanded += 1
         return successors
 
     def getCostOfActions(self, action_seq):
@@ -389,9 +403,26 @@ def cornersHeuristic(cur_state, problem):
     """
     corners = problem.corners  # These are the corner coordinates
     walls = problem.walls  # These are the walls of the maze, as a Grid (game.py)
-
+    
     "*** YOUR CODE HERE ***"
-    return 0  # Default to trivial solution
+    
+    if problem.isGoalState(cur_state):
+        return 0
+    
+    cur_position, visitedCorners = cur_state
+    
+    unvisitedCorners = set(corners) - visitedCorners
+    
+    if not unvisitedCorners:
+        return 0
+    
+    distaces = [manhattanDistance(cur_position, corner) for corner in unvisitedCorners]
+    
+    return max(distaces)
+
+def manhattanDistance(xy1, xy2):
+    "The Manhattan distance between two (x, y) points."
+    return abs(xy1[0] - xy2[0]) + abs(xy1[1] - xy2[1])
 
 
 class AStarCornersAgent(SearchAgent):
@@ -609,4 +640,9 @@ class AnyFoodSearchProblem(PositionSearchProblem):
         x, y = state
 
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        
+        if self.food[x][y]:
+            return True
+        
+        return False
+        
