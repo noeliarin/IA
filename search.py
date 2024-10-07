@@ -87,70 +87,43 @@ def depthFirstSearch(search_problem):
 
     This function should return a list of actions to reach the goal.
     """
-    
-    
-    structure = util.Stack()
+    return generic(search_problem, util.Stack())
+
+def generic(search_problem, structure,priority_queue):
+
     start_state = search_problem.getStartState()
-    structure.push((start_state, [], 0))  
+    
+    if priority_queue:
+        structure.push((start_state, [], 0))
+    else:
+        structure.push((start_state, [], 0),0)  
     visited = []
 
     while not structure.isEmpty():
-        
         current_state, directions, current_cost = structure.pop()
 
-        
         if search_problem.isGoalState(current_state):
-            return directions  
+            return directions
 
-        
         if current_state not in visited:
-            visited.append(current_state)  
+            visited.append(current_state)
 
-            
             for successor, direction, cost in search_problem.getSuccessors(current_state):
                 if successor not in visited:
-                    
                     new_directions = directions + [direction]
-                    
-                    structure.push((successor, new_directions, current_cost + cost))
+                    if priority_queue:  
+                        structure.push((successor, new_directions, current_cost+cost),current_cost + cost)
+                    else:                      
+                        structure.push((successor, new_directions, current_cost + cost))
 
-    
     return None
-
 
 
 
 
 def breadthFirstSearch(search_problem):
-    """Search the shallowest nodes in the search tree first."""
-    
-    
-    structure = util.Queue()
-    start_state = search_problem.getStartState()
-    structure.push((start_state, [], 0))  
-    visited = []
-
-    while not structure.isEmpty():
-        
-        current_state, directions, current_cost = structure.pop()
-
-        
-        if search_problem.isGoalState(current_state):
-            return directions  
-
-        
-        if current_state not in visited:
-            visited.append(current_state)  
-
-            
-            for successor, direction, cost in search_problem.getSuccessors(current_state):
-                if successor not in visited:
-                    
-                    new_directions = directions + [direction]
-                    
-                    structure.push((successor, new_directions, current_cost + cost))
-
-    return None
+    """Search the shallowest nodes in the search tree first."""  
+    return generic(search_problem, util.Queue())
 
 
 def uniformCostSearch(search_problem):
@@ -187,10 +160,6 @@ def uniformCostSearch(search_problem):
 
 
 
-    
-    util.raiseNotDefined()
-
-
 def nullHeuristic(state, search_problem=None):
     """
     A heuristic function estimates the cost from the current state to the nearest
@@ -202,8 +171,28 @@ def nullHeuristic(state, search_problem=None):
 def aStarSearch(search_problem, heuristic=nullHeuristic):
     """Search the node that has the lowest combined cost and heuristic first."""
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    structure = util.PriorityQueue()
+    start_state = search_problem.getStartState()
+    structure.push((start_state, [], 0), 0)
 
+    visited = []
+
+    while not structure.isEmpty():
+        current_state, directions, current_cost = structure.pop() 
+    
+        if search_problem.isGoalState(current_state):
+            return directions
+        
+        if current_state not in visited:
+            visited.append(current_state)
+
+            for successor, direction, cost in search_problem.getSuccessors(current_state):
+                if successor not in visited:
+
+                    priority = heuristic(successor, search_problem) + (current_cost + cost) 
+                    structure.push((successor, directions + [direction], current_cost + cost), priority) 
+
+    return None
 
 # Abbreviations
 bfs = breadthFirstSearch
