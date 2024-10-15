@@ -1,0 +1,562 @@
+[
+    {
+        "puzzle_name": "test_opening_1_puzzle",
+        "puzzle_game": "reversi",
+        "boards": [
+            {
+                "name": "initial_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "........",
+                    "...WB...",
+                    "...BWB..",
+                    ".....W..",
+                    "........",
+                    "........"
+                ]
+            },
+            {
+                "name": "f7_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "........",
+                    "...WB...",
+                    "...BWB..",
+                    ".....B..",
+                    ".....B..",
+                    "........"
+                ]
+            },
+            {
+                "name": "e6_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "........",
+                    "...WB...",
+                    "...BBB..",
+                    "....BW..",
+                    "........",
+                    "........"
+                ]
+            },
+            {
+                "name": "d3_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "...B....",
+                    "...BB...",
+                    "...BWB..",
+                    ".....W..",
+                    "........",
+                    "........"
+                ]
+            },
+            {
+                "name": "c4_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "........",
+                    "..BBB...",
+                    "...BWB..",
+                    ".....W..",
+                    "........",
+                    "........"
+                ]
+            }
+        ],
+        "ranking": {
+            "f7_board": 4,
+            "e6_board": 3,
+            "d3_board": 2,
+            "c4_board": 1
+        }
+    },
+    {
+        "puzzle_name": "test_opening_2_puzzle",
+        "puzzle_game": "reversi",
+        "boards": [
+            {
+                "name": "initial_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "...B....",
+                    "...BWW..",
+                    "...BW...",
+                    "...WB...",
+                    "........",
+                    "........"
+                ]
+            },
+            {
+                "name": "d7_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "...B....",
+                    "...BWW..",
+                    "...BW...",
+                    "...BB...",
+                    "...B....",
+                    "........"
+                ]
+            },
+            {
+                "name": "f6_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "...B....",
+                    "...BWW..",
+                    "...BB...",
+                    "...WBB..",
+                    "........",
+                    "........"
+                ]
+            },
+            {
+                "name": "c6_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "...B....",
+                    "...BWW..",
+                    "...BW...",
+                    "..BBB...",
+                    "........",
+                    "........"
+                ]
+            },
+            {
+                "name": "f5_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "...B....",
+                    "...BBW..",
+                    "...BBB..",
+                    "...WB...",
+                    "........",
+                    "........"
+                ]
+            },
+            {
+                "name": "g4_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "...B....",
+                    "...BBBB.",
+                    "...BW...",
+                    "...WB...",
+                    "........",
+                    "........"
+                ]
+            },
+            {
+                "name": "f3_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "...B.B..",
+                    "...BBW..",
+                    "...BW...",
+                    "...WB...",
+                    "........",
+                    "........"
+                ]
+            },
+            {
+                "name": "e3_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "...BB...",
+                    "...BBW..",
+                    "...BB...",
+                    "...WB...",
+                    "........",
+                    "........"
+                ]
+            }
+        ],
+        "ranking": {
+            "d7_board": 7,
+            "f6_board": 6,
+            "c6_board": 4,
+            "f5_board": 4,
+            "g4_board": 3,
+            "f3_board": 2,
+            "e3_board": 1
+        }
+    },
+    {
+        "puzzle_name": "test_midgame_1_puzzle",
+        "puzzle_game": "reversi",
+        "boards": [
+            {
+                "name": "initial_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "..BW.BBB",
+                    "...BWWBB",
+                    ".BBBWBWB",
+                    "..WWBBWB",
+                    "..WWWWWW",
+                    ".WWW.WB."
+                ]
+            },
+            {
+                "name": "e8_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "..BW.BBB",
+                    "...BWWBB",
+                    ".BBBWBWB",
+                    "..BWBBBB",
+                    "..WBBBWW",
+                    ".WWWBBB."
+                ]
+            },
+            {
+                "name": "b7_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "..BW.BBB",
+                    "...BWWBB",
+                    ".BBBWBWB",
+                    "..BWBBWB",
+                    ".BWWWWWW",
+                    ".WWW.WB."
+                ]
+            },
+            {
+                "name": "e3_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "..BBBBBB",
+                    "...BBBBB",
+                    ".BBBBBBB",
+                    "..WWBBWB",
+                    "..WWWWWW",
+                    ".WWW.WB."
+                ]
+            },
+            {
+                "name": "c2_board",
+                "board_array": [
+                    "........",
+                    "..B.....",
+                    "..BB.BBB",
+                    "...BBWBB",
+                    ".BBBWBWB",
+                    "..WWBBWB",
+                    "..WWWWWW",
+                    ".WWW.WB."
+                ]
+            },
+            {
+                "name": "d2_board",
+                "board_array": [
+                    "........",
+                    "...B....",
+                    "..BB.BBB",
+                    "...BWWBB",
+                    ".BBBWBWB",
+                    "..WWBBWB",
+                    "..WWWWWW",
+                    ".WWW.WB."
+                ]
+            },
+            {
+                "name": "b6_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "..BW.BBB",
+                    "...BWWBB",
+                    ".BBBWBWB",
+                    ".BBBBBWB",
+                    "..WWWWWW",
+                    ".WWW.WB."
+                ]
+            },
+            {
+                "name": "h8_board",
+                "board_array": [
+                    "........",
+                    "........",
+                    "..BW.BBB",
+                    "...BWWBB",
+                    ".BBBWBWB",
+                    "..WWBBWB",
+                    "..WWWWBB",
+                    ".WWW.WBB"
+                ]
+            }
+        ],
+        "ranking": {
+            "e8_board": 7,
+            "b7_board": 6,
+            "e3_board": 5,
+            "c2_board": 4,
+            "d2_board": 3,
+            "b6_board": 2,
+            "h8_board": 1
+        }
+    },
+    {
+        "puzzle_name": "test_midgame_2_puzzle",
+        "puzzle_game": "reversi",
+        "boards": [
+            {
+                "name": "initial_board",
+                "board_array": [
+                    ".WWW....",
+                    ".WWWB...",
+                    "BWWBB...",
+                    "BBBBBB..",
+                    "BBBBBB..",
+                    "BBBBBB..",
+                    ".WWBB...",
+                    ".WWWWWW."
+                ]
+            },
+            {
+                "name": "a7_board",
+                "board_array": [
+                    ".WWW....",
+                    ".WWWB...",
+                    "BWWBB...",
+                    "BBBBBB..",
+                    "BBBBBB..",
+                    "BBBBBB..",
+                    "BBBBB...",
+                    ".WWWWWW."
+                ]
+            },
+            {
+                "name": "a2_board",
+                "board_array": [
+                    ".WWW....",
+                    "BBBBB...",
+                    "BBWBB...",
+                    "BBBBBB..",
+                    "BBBBBB..",
+                    "BBBBBB..",
+                    ".WWBB...",
+                    ".WWWWWW."
+                ]
+            },
+            {
+                "name": "a1_board",
+                "board_array": [
+                    "BWWW....",
+                    ".BWWB...",
+                    "BWBBB...",
+                    "BBBBBB..",
+                    "BBBBBB..",
+                    "BBBBBB..",
+                    ".WWBB...",
+                    ".WWWWWW."
+                ]
+            },
+            {
+                "name": "e1_board",
+                "board_array": [
+                    ".WWWB...",
+                    ".WWBB...",
+                    "BWBBB...",
+                    "BBBBBB..",
+                    "BBBBBB..",
+                    "BBBBBB..",
+                    ".WWBB...",
+                    ".WWWWWW."
+                ]
+            },
+            {
+                "name": "a8_board",
+                "board_array": [
+                    ".WWW....",
+                    ".WWWB...",
+                    "BWWBB...",
+                    "BBBBBB..",
+                    "BBBBBB..",
+                    "BBBBBB..",
+                    ".BWBB...",
+                    "BWWWWWW."
+                ]
+            }
+        ],
+        "ranking": {
+            "a7_board": 5,
+            "a2_board": 4,
+            "a1_board": 3,
+            "e1_board": 2,
+            "a8_board": 1
+        }
+    },
+    {
+        "puzzle_name": "test_endgame_1_puzzle_inv",
+        "puzzle_game": "reversi",
+        "boards": [
+            {
+                "name": "initial_board",
+                "board_array": [
+                    "BBBBBBBB",
+                    "BBBWWWWW",
+                    "BBBBWBWW",
+                    "BWBWBWBW",
+                    "BWWBWBBW",
+                    ".WWWWWBW",
+                    ".WWWBBWW",
+                    "..WWWWWW"
+                ]
+            },
+            {
+                "name": "b8_board",
+                "board_array": [
+                    "BBBBBBBB",
+                    "BBBWWWWW",
+                    "BBBBWBWW",
+                    "BBBWBWBW",
+                    "BBWBWBBW",
+                    ".BWWWWBW",
+                    ".BWWBBWW",
+                    ".BWWWWWW"
+                ]
+            },
+            {
+                "name": "a8_board",
+                "board_array": [
+                    "BBBBBBBB",
+                    "BBBWWWWW",
+                    "BBBBWBWW",
+                    "BWBWBWBW",
+                    "BWWBWBBW",
+                    ".WBWWWBW",
+                    ".BWWBBWW",
+                    "B.WWWWWW"
+                ]
+            },
+            {
+                "name": "a6_board",
+                "board_array": [
+                    "BBBBBBBB",
+                    "BBBWWWWW",
+                    "BBBBWBWW",
+                    "BWBWBWBW",
+                    "BBWBWBBW",
+                    "BBBBBBBW",
+                    ".WWWBBWW",
+                    "..WWWWWW"
+                ]
+            },
+            {
+                "name": "a7_board",
+                "board_array": [
+                    "BBBBBBBB",
+                    "BBBWWBWW",
+                    "BBBBBBWW",
+                    "BWBBBWBW",
+                    "BWBBWBBW",
+                    ".BWWWWBW",
+                    "BBBBBBWW",
+                    "..WWWWWW"
+                ]
+            }
+        ],
+        "ranking": {
+            "b8_board": 4,
+            "a8_board": 2,
+            "a6_board": 2,
+            "a7_board": 1
+        }
+    },
+    {
+        "puzzle_name": "test_endgame_2_puzzle",
+        "puzzle_game": "reversi",
+        "boards": [
+            {
+                "name": "initial_board",
+                "board_array": [
+                    "BBBBWWWB",
+                    "WBBBWWWB",
+                    "WBBWBBWB",
+                    "WBBBWBWB",
+                    "WWBWWWWB",
+                    "WBWWWWWB",
+                    "WWBWWWW.",
+                    "WWWWW..."
+                ]
+            },
+            {
+                "name": "f8_board",
+                "board_array": [
+                    "BBBBWWWB",
+                    "WBBBWWWB",
+                    "WBBWBBWB",
+                    "WBBBWBWB",
+                    "WWBWWBWB",
+                    "WBWBWBWB",
+                    "WWBWBBB.",
+                    "WWWWWB.."
+                ]
+            },
+            {
+                "name": "h8_board",
+                "board_array": [
+                    "BBBBWWWB",
+                    "WBBBWWWB",
+                    "WBBWBBWB",
+                    "WBBBWBWB",
+                    "WWBWBWWB",
+                    "WBWWWBWB",
+                    "WWBWWWB.",
+                    "WWWWW..B"
+                ]
+            },
+            {
+                "name": "h7_board",
+                "board_array": [
+                    "BBBBWWWB",
+                    "WBBBWWWB",
+                    "WBBBBBWB",
+                    "WBBBBBWB",
+                    "WWBWWBWB",
+                    "WBWWWWBB",
+                    "WWBBBBBB",
+                    "WWWWW..."
+                ]
+            },
+            {
+                "name": "g8_board",
+                "board_array": [
+                    "BBBBWWWB",
+                    "WBBBWWWB",
+                    "WBBWBBWB",
+                    "WBBBWBWB",
+                    "WWBBWWWB",
+                    "WBWWBWWB",
+                    "WWBWWBW.",
+                    "WWWWW.B."
+                ]
+            }
+        ],
+        "ranking": {
+            "f8_board": 4,
+            "h8_board": 3,
+            "h7_board": 2,
+            "g8_board": 1
+        }
+    }
+]
