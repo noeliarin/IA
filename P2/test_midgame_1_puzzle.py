@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from typing import Sequence
 import numpy as np
-from p2_gggg_mm_apellido1_apellido2 import CornerHeuristic, MobilityHeuristic, PieceAdvantageHeuristic
+from p2_1322_11_Piñón_Rincón import CornerHeuristic, MobilityHeuristic, PieceAdvantageHeuristic
 from game import Player, TwoPlayerGameState
 from heuristic import Heuristic
 from reversi import (

@@ -75,8 +75,8 @@ player_alphabeta2 = Player(
 )
 
 ## If you want to play against one of your heuristics, you should do the following
-from p2_gggg_mm_apellido1_apellido2 import CornerHeuristic  # import your StudentHeuristic here
-my_heuristic = CornerHeuristic() # instantiate your heuristic here
+from p2_1322_11_Piñón_Rincón import ErnesyNoelia  # import your StudentHeuristic here
+my_heuristic = ErnesyNoelia() # instantiate your heuristic here
 my_player = Player(
     name=my_heuristic.get_name(),
     strategy=MinimaxStrategy(  # MinimaxAlphaBetaStrategy(
@@ -93,13 +93,13 @@ my_player = Player(
 #player_a, player_b = player_manual, player_manual2
 
 # Manual vs minimax player
-# player_a, player_b = player_manual, player_minimax4
+#player_a, player_b = player_manual, my_player
 
 # minimax alpha-beta vs minimax alpha-beta player
-player_a, player_b = player_minimax4, player_minimax3
+player_a, player_b = my_player, player_minimax3
 
 # minimax alpha-beta vs minimax alpha-beta player
-# player_a, player_b = player_alphabeta1, player_alphabeta2
+#player_a, player_b = player_alphabeta1, player_alphabeta2
 
 """
 Here you can initialize the player that moves first

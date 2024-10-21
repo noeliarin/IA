@@ -12,7 +12,7 @@ from typing import Sequence
 import numpy as np
 from game import Player, TwoPlayerGameState
 from heuristic import Heuristic
-from p2_gggg_mm_apellido1_apellido2 import CornerHeuristic, MobilityHeuristic, PieceAdvantageHeuristic
+from p2_1322_11_Piñón_Rincón import ErnesyNoelia
 
 from reversi import (
     Reversi,
@@ -52,12 +52,12 @@ def heuristic_1(state: TwoPlayerGameState) -> float:
     return subtraction_heuristic(state)
 
 
-# Jugador usando CornerHeuristic
+# Jugador usando ErnesyNoelia
 player_minimax_1 = Player(
     name='Black',
     strategy=MinimaxStrategy(
         heuristic=Heuristic(name='corner_control',
-                            evaluation_function=CornerHeuristic().evaluation_function),
+                            evaluation_function=ErnesyNoelia().evaluation_function),
         max_depth_minimax=3,
         verbose=0,
     ),
@@ -67,7 +67,7 @@ player_minimax_2 = Player(
     name='White',
     strategy=MinimaxStrategy(
         heuristic=Heuristic(name='corner_control_white',
-                            evaluation_function=CornerHeuristic().evaluation_function),
+                            evaluation_function=ErnesyNoelia().evaluation_function),
         max_depth_minimax=3,
         verbose=0,
     ),
@@ -200,7 +200,7 @@ print(' ........\n',  # 1
       '........\n'  # 8
       )
 print("This is the ranking of the possible movements: E6, D3, C4, F7")
-print("1- E6  -- your score for this movement:", CornerHeuristic().evaluation_function(game_state_e6))
-print("2- D3  -- your score for this movement:", CornerHeuristic().evaluation_function(game_state_d3))
-print("3- C4  -- your score for this movement:", CornerHeuristic().evaluation_function(game_state_c4))
-print("4- F7  -- your score for this movement:", CornerHeuristic().evaluation_function(game_state_f7))
+print("1- E6  -- your score for this movement:", ErnesyNoelia().evaluation_function(game_state_e6))
+print("2- D3  -- your score for this movement:", ErnesyNoelia().evaluation_function(game_state_d3))
+print("3- C4  -- your score for this movement:", ErnesyNoelia().evaluation_function(game_state_c4))
+print("4- F7  -- your score for this movement:", ErnesyNoelia().evaluation_function(game_state_f7))
